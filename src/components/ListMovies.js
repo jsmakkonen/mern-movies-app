@@ -17,7 +17,7 @@ const ListMovies = () => {
 
     const deleteMovie = async (id) => {
         try {
-            const deleteMovie = await fetch(`http://localhost:5000/movies/${id}`, {
+            await fetch(`http://localhost:5000/movies/${id}`, {
                 method: 'DELETE'
             });
             setMovies(movies.filter(movie => movie._id !== id));

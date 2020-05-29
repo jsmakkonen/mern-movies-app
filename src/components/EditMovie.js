@@ -13,8 +13,7 @@ const EditMovie = ({ movie }) => {
   const updateValues = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(
-        `http://localhost:5000/movies/${movie._id}`,
+      await fetch(`http://localhost:5000/movies/${movie._id}`,
         {
           method: "POST",
           headers: {
@@ -31,7 +30,6 @@ const EditMovie = ({ movie }) => {
         }
       );
 
-      //console.log(response);
       window.location = "/";
     } catch (err) {
       console.log(err.message);

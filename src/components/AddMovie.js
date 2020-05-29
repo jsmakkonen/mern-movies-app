@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const AddMovie = () => {
     const [allValues, setValues] = useState({
@@ -99,11 +100,18 @@ const AddMovie = () => {
                 <button
                   type="button"
                   className="btn btn-primary mt-4"
-                  data-dismiss="modal"
                   onClick={(e) => addNewMovie(e)}
                 >
                   Add
                 </button>
+                <Link to='/'>
+                <button
+                  type="button"
+                  className="btn btn-secondary btn-2 mt-4"
+                >
+                  Return
+                </button>
+                </Link>
               </div>
         </Fragment>
     )
